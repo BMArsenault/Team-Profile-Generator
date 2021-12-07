@@ -19,6 +19,8 @@ class Employee {
     }
 
     getRole() {
-        return Employee;
+        return "Employee";
     }
 }
+
+module.exports = Employee;
