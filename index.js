@@ -6,6 +6,7 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
 const team = [];
+const idArray = [];
 
 const promptManager = () => {
     return inquirer.prompt([
@@ -64,6 +65,7 @@ const promptManager = () => {
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerNumber);
         team.push(manager);
+        idArray.push(answers.managerId);
         createEmployee();
     })
 }
@@ -150,6 +152,7 @@ const addEngineer = () => {
     ]).then(answers => {
         const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
         team.push(engineer);
+        idArray.push(answers.engineerId);
         createEmployee();
     })
 }
@@ -211,6 +214,7 @@ const addIntern = () => {
     ]).then(answers => {
         const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
         team.push(intern);
+        idArray.push(answers.internId);
         createEmployee();
     })
 }
