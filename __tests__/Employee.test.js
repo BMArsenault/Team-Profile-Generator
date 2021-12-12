@@ -14,9 +14,9 @@ test('creates a new ID object', () => {
     expect(employee.id).toBe('22');
 })
 
-test('creates a new employee object', () => {
-    const employeeEmail = new EmployeeEmail('Brian');
-    expect(employee.email).toBe('Brian');
+test('creates a new employee email', () => {
+    const employeeEmail = new EmployeeEmail('Brian@fakeemail.com');
+    expect(employee.email).toBe('Brian@fakeemail.com');
 })
 
 test('creates a new "employee" role', () => {
