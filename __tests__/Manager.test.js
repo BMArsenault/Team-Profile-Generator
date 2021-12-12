@@ -3,27 +3,12 @@ const Index = require('../index');
 
 jest.mock('../lib/Manager.js');
 
-test('creates a new employee object', () => {
-    const employee = new Employee('Brian');
-    expect(employee.name).toBe('Brian');
-})
-
-test('creates a new ID object', () => {
-    const employeeId = new EmployeeID('22');
-    expect(employee.id).toBe('22');
-})
-
-test('creates a new employee email', () => {
-    const employeeEmail = new EmployeeEmail('Brian@fakeemail.com');
-    expect(employee.email).toBe('Brian@fakeemail.com');
-})
-
-test('creates a new employee office number', () => {
-    const employeeOfficeNumber = new EmployeeOfficeNumber('555-555-5555');
-    expect(employee.email).toBe('555-555-5555');
-})
-
-test('creates a new "employee" role', () => {
-    const employeeRole = new EmployeeRole('Manager');
-    expect(employee.role).toBe('Manager');
-})
+// test('creates a manager object', () => {
+//     const manager = new Manager('Brian', '2', 'Brian@fakeemail.com', '555.555.5555', 'Manager');
+//     console.log(manager.name);
+//     expect(manager.name).toBe('Brian');
+//     expect(manager.id).toBe('2');
+//     expect(manager.email).toBe('Brian@fakeemail.com');
+//     expect(manager.officeNumber).toBe('555-555-5555');
+//     expect(manager.role).toBe('Manager');
+//   });

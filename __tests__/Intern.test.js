@@ -3,27 +3,12 @@ const Index = require('../index');
 
 jest.mock('../lib/Intern.js');
 
-test('creates a new employee object', () => {
-    const employee = new Employee('Brian');
-    expect(employee.name).toBe('Brian');
-})
-
-test('creates a new ID object', () => {
-    const employeeId = new EmployeeID('22');
-    expect(employee.id).toBe('22');
-})
-
-test('creates a new employee email', () => {
-    const employeeEmail = new EmployeeEmail('Brian@fakeemail.com');
-    expect(employee.email).toBe('Brian@fakeemail.com');
-})
-
-test('creates a new employee school', () => {
-    const employeeSchool = new EmployeeSchool('Columbia');
-    expect(employee.email).toBe('Columbia');
-})
-
-test('creates a new "employee" role', () => {
-    const employeeRole = new EmployeeRole('Intern');
-    expect(employee.role).toBe('Intern');
-})
+// test('creates an intern object', () => {
+//     const intern = new Intern('Brian', '2', 'Brian@fakeemail.com', '555.555.5555', 'Intern');
+  
+//     expect(intern.name).toBe('Brian');
+//     expect(intern.id).toBe('2');
+//     expect(intern.email).toBe('Brian@fakeemail.com');
+//     expect(intern.officeNumber).toBe('555-555-5555');
+//     expect(intern.role).toBe('Intern');
+//   });

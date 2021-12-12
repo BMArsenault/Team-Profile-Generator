@@ -3,27 +3,12 @@ const Index = require('../index');
 
 jest.mock('../lib/Engineer.js');
 
-test('creates a new employee object', () => {
-    const employee = new Employee('Brian');
-    expect(employee.name).toBe('Brian');
-})
-
-test('creates a new ID object', () => {
-    const employeeId = new EmployeeID('22');
-    expect(employee.id).toBe('22');
-})
-
-test('creates a new employee email', () => {
-    const employeeEmail = new EmployeeEmail('Brian@fakeemail.com');
-    expect(employee.email).toBe('Brian@fakeemail.com');
-})
-
-test('creates a new employee github username', () => {
-    const employeeGithub = new EmployeeGithub('BrianGithub');
-    expect(employee.email).toBe('BrianGithub');
-})
-
-test('creates a new "employee" role', () => {
-    const employeeRole = new EmployeeRole('Engineer');
-    expect(employee.role).toBe('Engineer');
-})
+// test('creates an engineer object', () => {
+//     const engineer = new Engineer('Brian', '2', 'Brian@fakeemail.com', 'BrianGithub', 'Engineer');
+  
+//     expect(engineer.name).toBe('Brian');
+//     expect(engineer.id).toBe('2');
+//     expect(engineer.email).toBe('Brian@fakeemail.com');
+//     expect(engineer.github).toBe('BrianGithub');
+//     expect(engineer.role).toBe('Engineer');
+//   });

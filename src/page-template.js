@@ -2,7 +2,7 @@
 const generateManager = manager => {
 const team = [];
   return `
-<div class="card px-2" style="width: 18rem;">
+<div class="card mx-2" style="width: 18rem;">
 <div class="card-header bg-primary">
  ${manager.getName()} <br/>
  ${manager.getRole()}
@@ -22,7 +22,7 @@ if (!engineer) {
     return;
 }
 return `
-<div class="card px-2" style="width: 18rem;">
+<div class="card mx-2" style="width: 18rem;">
   <div class="card-header bg-primary">
    ${engineer.getName()} <br/>
    ${engineer.getRole()}
@@ -42,7 +42,7 @@ if (!intern) {
     return;
 }
 return `
-<div class="card px-2" style="width: 18rem;">
+<div class="card mx-2" style="width: 18rem;">
   <div class="card-header bg-primary">
     ${intern.getName()} <br/>
     ${intern.getRole()}
