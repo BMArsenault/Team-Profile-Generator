@@ -2,8 +2,8 @@
 const generateManager = manager => {
 const team = [];
   return `
-<div class="card mx-2" style="width: 18rem;">
-<div class="card-header bg-primary">
+<div class="card mx-2 mt-5" style="width: 18rem;">
+<div class="card-header bg-primary text-center">
  ${manager.getName()} <br/>
  ${manager.getRole()}
 </div>
@@ -22,15 +22,15 @@ if (!engineer) {
     return;
 }
 return `
-<div class="card mx-2" style="width: 18rem;">
-  <div class="card-header bg-primary">
+<div class="card mx-2 mt-5" style="width: 18rem;">
+  <div class="card-header bg-primary text-center">
    ${engineer.getName()} <br/>
    ${engineer.getRole()}
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">ID: ${engineer.getId()}</li>
     <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-    <li class="list-group-item">Github: ${engineer.getGithub()}</li>
+    <li class="list-group-item">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></li>
   </ul>
 </div>
 `;
@@ -42,8 +42,8 @@ if (!intern) {
     return;
 }
 return `
-<div class="card mx-2" style="width: 18rem;">
-  <div class="card-header bg-primary">
+<div class="card mx-2 mt-5" style="width: 18rem;">
+  <div class="card-header bg-primary text-center">
     ${intern.getName()} <br/>
     ${intern.getRole()}
   </div>
