@@ -25,6 +25,6 @@ Github Link: https://www.github.com/BMArsenault
 * <a href="https://npmjs.com" target="_blank">npmjs</a>
 * <a href="https://google.com" target="_blank">Google</a>
 * <a href="https://nodejs.org" target="_blank">Node.js</a>
-* * <a href="https://https://jestjs.io/" target="_blank">Jestjs</a>
+* <a href="https://https://jestjs.io/" target="_blank">Jestjs</a>
 * [Repo (here):](https://https://github.com/BMArsenault/Team-Profile-Generator)
 * ![Formulated-team](https://user-images.githubusercontent.com/89749979/145731359-6cd7c86e-7047-4c9c-a127-caf4e29bed29.png)
