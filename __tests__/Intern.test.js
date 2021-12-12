@@ -1,7 +1,7 @@
 const Intern = require('../lib/Intern');
 const Index = require('../index');
 
-jest.mock('../lib/Manager.js');
+jest.mock('../lib/Intern.js');
 
 test('creates a new employee object', () => {
     const employee = new Employee('Brian');
