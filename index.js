@@ -8,6 +8,7 @@ const Manager = require("./lib/Manager");
 const generateTeam = require("./src/page-template");
 const team = [];
 
+// create function to start building the team
 function buildTeam() {
 // prompt manager questions
   function promptManager() {
@@ -63,7 +64,7 @@ function buildTeam() {
             return false;
           }
         }
-    },
+    }, // take answers and create a new manager, push manager to team array.  run addemployee func
     ]).then(answers => {
         const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
         team.push(manager);
@@ -80,7 +81,7 @@ function buildTeam() {
               name: 'employeeRole',
               message: 'Would you like to add another employee?',
               choices: ['Engineer', 'Intern', 'I do not wish to add another employee'],
-          },
+          }, // based off choices, run func to add engineer, intern or generate html
       ]).then(newEmployee => {
           switch (newEmployee.employeeRole) {
               case "Engineer":
@@ -149,7 +150,7 @@ function buildTeam() {
                   return false;
                 }
               }
-          },
+          },  // create new engineer from answers and push to team array
       ]).then(answers => {
           const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGithub);
           team.push(engineer);
@@ -210,7 +211,7 @@ function buildTeam() {
                   return false;
                 }
               }
-          },
+          }, // create new intern based off answers and push to team
       ]).then(answers => {
           const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
           team.push(intern);
@@ -218,7 +219,7 @@ function buildTeam() {
           addEmployee();
       })
   }
-
+// create function to hold HTML with card data function inserted
   function buildHtml(data) {
     return `
     <!DOCTYPE html>
@@ -252,16 +253,16 @@ function buildTeam() {
     </html>
     `;
   }
-
+//  create function to generate the html
   function generateHTML() {
   fs.writeFile('./dist/team.html', buildHtml(team), function (err) {
     if (err) throw err;
   console.log('File is created successfully.');
   });
   }
- 
+// prompt user with first set of questions
   promptManager();
 
 }
-
+// start building
 buildTeam();

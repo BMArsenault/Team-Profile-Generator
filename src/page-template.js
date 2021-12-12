@@ -1,10 +1,8 @@
+// create html card for manager
 const generateManager = manager => {
 const team = [];
-  // if (!answers) {
-  //   return;
-  // }
   return `
-<div class="card" style="width: 18rem;">
+<div class="card px-2" style="width: 18rem;">
 <div class="card-header bg-primary">
  ${manager.getName()} <br/>
  ${manager.getRole()}
@@ -24,7 +22,7 @@ if (!engineer) {
     return;
 }
 return `
-<div class="card" style="width: 18rem;">
+<div class="card px-2" style="width: 18rem;">
   <div class="card-header bg-primary">
    ${engineer.getName()} <br/>
    ${engineer.getRole()}
@@ -44,7 +42,7 @@ if (!intern) {
     return;
 }
 return `
-<div class="card" style="width: 18rem;">
+<div class="card px-2" style="width: 18rem;">
   <div class="card-header bg-primary">
     ${intern.getName()} <br/>
     ${intern.getRole()}
@@ -58,7 +56,7 @@ return `
 `;
 };
 
-
+// create forloop to grab everyone from html array
 const generateTeam = teams => {
   console.log(teams);
   const html = [];
@@ -71,21 +69,7 @@ for(i = 0; i < teams.length; i++) {
       html.push(generateIntern(teams[i]))
     }
 }
-// create html for manager
 
-  // html.push(team
-  //   .filter(employee => employee.getRole() === "Manager")
-  //   .map(manager => generateManager(manager))
-  //   );
-  // html.push(team
-  //   .filter(employee => employee.getRole() === "Engineer")
-  //   .map(engineer => generateEngineer(engineer)).join("")
-  //   );
-  // html.push(team
-  //   .filter(employee => employee.getRole() === "Intern")
-  //   .map(intern => generateIntern(intern)).join("")
-  //   );
-  
   return html.join("");
 
 };
