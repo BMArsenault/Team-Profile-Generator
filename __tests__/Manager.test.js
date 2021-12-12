@@ -1,14 +1,31 @@
 const Manager = require('../lib/Manager');
-const Index = require('../index');
 
-jest.mock('../lib/Manager.js');
+test('Can get name via getName()', () => {
+    const testValue = "Brian";
+    const t = new Manager(testValue, 1, "brian@fakeemail.com");
+    expect(t.getName()).toBe(testValue);
+});
 
-// test('creates a manager object', () => {
-//     const manager = new Manager('Brian', '2', 'Brian@fakeemail.com', '555.555.5555', 'Manager');
-//     console.log(manager.name);
-//     expect(manager.name).toBe('Brian');
-//     expect(manager.id).toBe('2');
-//     expect(manager.email).toBe('Brian@fakeemail.com');
-//     expect(manager.officeNumber).toBe('555-555-5555');
-//     expect(manager.role).toBe('Manager');
-//   });
+test('Can get ID via getId()', () => {
+    const testValue = "311";
+    const e = new Manager("Brian", testValue);
+    expect(e.getId()).toBe(testValue);
+});
+
+test('Can get Email via getEmail()', () => {
+    const testValue = "test@test.com";
+    const e = new Manager("Brian", 1, testValue);
+    expect(e.getEmail()).toBe(testValue);
+});
+
+test('Can get office number via getOfficeNumber()', () => {
+    const testValue = "555-555-5555";
+    const e = new Manager("Brian", 1, testValue);
+    expect(e.getEmail()).toBe(testValue);
+});
+
+test('getRole() should return Manager', () => {
+    const testValue = "Manager";
+    const e = new Manager("Brian", 1, testValue);
+    expect(e.getRole()).toBe(testValue);
+});

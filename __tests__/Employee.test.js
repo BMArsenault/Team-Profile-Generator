@@ -1,14 +1,25 @@
 const Employee = require('../lib/Employee');
-const Index = require('../index');
-const { TestWatcher } = require('jest');
 
-jest.mock('../lib/Employee.js');
+test('Can get name via getName()', () => {
+    const testValue = "Brian";
+    const t = new Employee(testValue, 1, "brian@fakeemail.com");
+    expect(t.getName()).toBe(testValue);
+});
 
-// test('creates an employee object', () => {
-//     const employee = new Employee('Brian', '2', 'Brian@fakeemail.com', 'Employee');
-  
-//     expect(employee.name).toBe('Brian');
-//     expect(employee.id).toBe('2');
-//     expect(employee.email).toBe('Brian@fakeemail.com');
-//     expect(employee.role).toBe('Employee');
-//   });
+test('Can get ID via getId()', () => {
+    const testValue = "311";
+    const e = new Employee("whatever", testValue);
+    expect(e.getId()).toBe(testValue);
+});
+
+test('Can get Email via getEmail()', () => {
+    const testValue = "test@test.com";
+    const e = new Employee("whatever", 1, testValue);
+    expect(e.getEmail()).toBe(testValue);
+});
+
+test('getRole() should return employee', () => {
+    const testValue = "Employee";
+    const e = new Employee("Brian", 1, testValue);
+    expect(e.getRole()).toBe(testValue);
+});
